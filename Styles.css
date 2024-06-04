@@ -1,0 +1,40 @@
+body{
+    background-color: darkslategray;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 ,h2 ,h3 ,h4 ,h5 ,h6{
+    text-align: center;
+    color:chocolate; 
+}
+
+p{
+    color:aliceblue;
+    font-size: 24px;
+    width: 70%;
+}
+/* IDs y clases, los IDs son unicos por elemento por otra parte las clases son repetibles, utilizo # para decirle a css que estoy usando un id */
+
+#Batalla-Freezer{
+    font-size: 1.5em;
+    font-weight: bold;    
+}
+
+a, img{
+    display: block;   
+}
+
+a{
+        margin: 50px 20px;
+        text-decoration: none;
+        color:firebrick;
+}
+
+a:hover{
+    color:aqua
+}
+
+img{
+    width: 20%;
+    margin: auto;
+}
