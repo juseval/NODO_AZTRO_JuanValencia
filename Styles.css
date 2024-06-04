@@ -15,7 +15,7 @@ p{
 }
 /* IDs y clases, los IDs son unicos por elemento por otra parte las clases son repetibles, utilizo # para decirle a css que estoy usando un id */
 
-#Batalla-Freezer{
+#Batalla-Tanjiro{
     font-size: 1.5em;
     font-weight: bold;    
 }
@@ -35,6 +35,6 @@ a:hover{
 }
 
 img{
-    width: 20%;
+    width: 30%;
     margin: auto;
 }
