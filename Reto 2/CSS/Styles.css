@@ -15,11 +15,10 @@ p{
 }
 /* IDs y clases, los IDs son unicos por elemento por otra parte las clases son repetibles, utilizo # para decirle a css que estoy usando un id */
 
-<<<<<<< HEAD
 #Batalla-Freezer{
-=======
+
+}
 #Batalla-Tanjiro{
->>>>>>> rama1
     font-size: 1.5em;
     font-weight: bold;    
 }
@@ -39,10 +38,7 @@ a:hover{
 }
 
 img{
-<<<<<<< HEAD
     width: 20%;
-=======
     width: 30%;
->>>>>>> rama1
     margin: auto;
 }
