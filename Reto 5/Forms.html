@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figura Geométrica</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../Reto 1/introduction.html">reto 1</a></li>
+        <li><a href="../Reto 2/html/Story.html">reto 2</a></li>
+        <li><a href="../Reto 3/HTML/Formulario.html">reto 3</a></li>
+        <li><a href="../Reto 4/Footer.html">reto 4</a></li>
+        <li><a id="reto" href="#">reto 5</a>
+          <ul class="reto5">
+            <li><a href="#rectangulo">Rectángulo</a></li>
+            <li><a href="#circulo">Círculo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="rectangulo">
+      <h2><span><img src="Rectangle.svg" alt="Rectangle"></span>Rectángulo</h2>
+      <div class="container">
+        <div class="input-group">
+          <label for="base-rectangulo">Base:</label>
+          <input type="number" id="base-rectangulo" placeholder="Ingresa la base">
+        </div>
+        <div class="input-group">
+          <label for="altura-rectangulo">Altura:</label>
+          <input type="number" id="altura-rectangulo" placeholder="Ingresa la altura">
+        </div>
+        <button id="calcular-rectangulo">Calcular</button>
+        <div class="output-group">
+          <p>Área: <span id="area-rectangulo"></span></p>
+          <p>Perímetro: <span id="perimetro-rectangulo"></span></p>
+          <p>Diagonal: <span id="diagonal-rectangulo"></span></p>
+        </div>
+          <div class="icono">
+            <i class="fa-light fa-rectangle-wide"></i>
+          </div>
+        <div class="explanation-group">
+          <h3>Explicación del cálculo:</h3>
+          <p id="explicacion-rectangulo"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="circulo">
+      <h2><span><img src="Circ.svg" alt="Círculo"></span> Círculo</h2>
+      <div class="container">
+        <div class="input-group">
+          <label for="radio-circulo">Radio:</label>
+          <input type="number" id="radio-circulo" placeholder="Ingresa el radio">
+        </div>
+        <button id="calcular-circulo">Calcular</button>
+        <div class="output-group">
+          <p>Área: <span id="area-circulo"></span></p>
+          <p>Perímetro: <span id="perimetro-circulo"></span></p>
+        </div>
+        <div class="explanation-group">
+          <h3>Explicación del cálculo:</h3>
+          <p id="explicacion-circulo"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="nav.js"></script>
+  <script src="Elementos.js"></script>
+</body>
+</html>
