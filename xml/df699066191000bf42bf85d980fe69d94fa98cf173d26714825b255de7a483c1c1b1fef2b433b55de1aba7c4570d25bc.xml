@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:sts="dian:gov:co:facturaelectronica:Structures-2-1" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2     http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd">
+  <ext:UBLExtensions>
+    <ext:UBLExtension>
+      <ext:ExtensionContent>
+        <sts:DianExtensions>
+          <sts:InvoiceControl>
+            <sts:InvoiceAuthorization>18764058788490</sts:InvoiceAuthorization>
+            <sts:AuthorizationPeriod>
+              <cbc:StartDate>2023-10-27</cbc:StartDate>
+              <cbc:EndDate>2024-10-27</cbc:EndDate>
+            </sts:AuthorizationPeriod>
+            <sts:AuthorizedInvoices>
+              <sts:Prefix>S</sts:Prefix>
+              <sts:From>30001</sts:From>
+              <sts:To>40000</sts:To>
+            </sts:AuthorizedInvoices>
+          </sts:InvoiceControl>
+          <sts:InvoiceSource>
+            <cbc:IdentificationCode listAgencyID="6" listAgencyName="United Nations Economic Commission for Europe" listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.1">CO</cbc:IdentificationCode>
+          </sts:InvoiceSource>
+          <sts:SoftwareProvider>
+            <sts:ProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800113024</sts:ProviderID>
+            <sts:SoftwareID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">6d7a8e0a-87d7-4ba8-9ea3-2e4c3713c6d8</sts:SoftwareID>
+          </sts:SoftwareProvider>
+          <sts:SoftwareSecurityCode schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">5de3634bc867c0c081670c7cd2303e2cacdca4197a77021454714a212383f76d39a9d1af00ce9556159d8dc639de299e</sts:SoftwareSecurityCode>
+          <sts:AuthorizationProvider>
+            <sts:AuthorizationProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800197268</sts:AuthorizationProviderID>
+          </sts:AuthorizationProvider>
+          <sts:QRCode>https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=df699066191000bf42bf85d980fe69d94fa98cf173d26714825b255de7a483c1c1b1fef2b433b55de1aba7c4570d25bc</sts:QRCode>
+        </sts:DianExtensions>
+      </ext:ExtensionContent>
+    </ext:UBLExtension>
+    <ext:UBLExtension>
+      <ext:ExtensionContent><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="SOENAC-712FFB983F075E84F5D2C12B5F390D73E40CA5D9"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><ds:Reference Id="REF-FB5B0C88832C9CC3DDAF064037FC57D5E151D3C2" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>TdUBzzrT9Np4mYCstetRyJYm8c5NKGnZHIcKSOABuly/inAKADQZ8GoKVvR9PXtsiIvtr6op9Z7+uZSs95zvRQ==</ds:DigestValue></ds:Reference><ds:Reference URI="#KEY-INFO-A1356179655234384C50A606C4913B97459CA557"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>yWfMpN6Iuqd0xbstnbRdx/jDhPkIo1tS28Tu7uWCFTPdDFLr3Aik5whQxNCkqmu7knHdhvQ1A3dWbXXzceX8Uw==</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SIGNED-PROPS-68A02D748E1729A7E3196FB7FE34875788B74757"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>L1vrEXlSuPhzZpsPLFclwZ6TI+yfdNiIuAu9XFWn+vjcNxZFeLti11kHL4CBvJ0S9qLd6bpGpLD1V7yisqjRXQ==</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="SIG-VALUE-EE250ABE9F9B45D415912A1AF0371C107F78FA4F">MkmdLBglWuQde14+S/qMURJqB1XtZhkDcwbCjVJSt6mGf5KjT7YbMPIzRxq/6dCIUhkCkHBWTWz966+fz/PMnf+hseESRWwTHvfp3POOXEVk8cc05C801rR6KJmdualza9v8osyt3bFuCWhSrAKhWPMk/5zFK32Pl/L0DJiHpuaqYxOFIAjpZZ6tVHqJDmWHkh92vuJ+/gFbscNSk7YHLXq4OG53E3QpJ2ysLmSSr6aoMR8cm4FNUzW5NjDWrwR/864h+ScM8w84WPjoKc5JqixLV1NC0Ae0CfnxWmnK6VMYiJv9uiLKzXbgG/+MNmbToIlSPlfnBcUPyTTIOD50gg==</ds:SignatureValue><ds:KeyInfo Id="KEY-INFO-A1356179655234384C50A606C4913B97459CA557"><ds:X509Data><ds:X509Certificate>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</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties Target="#SOENAC-712FFB983F075E84F5D2C12B5F390D73E40CA5D9"><xades:SignedProperties Id="SIGNED-PROPS-68A02D748E1729A7E3196FB7FE34875788B74757"><xades:SignedSignatureProperties><xades:SigningTime>2024-06-19T07:14:20.307-05:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>7W3QXki5oreVgxG3tHBfLvNrksGSxgPe44H6w7DFUJe+sWZ1qCHtZaBPkoT1Gs5pFKZEb0rjclBVX3thUOMRtQ==</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CO,L=Bogota D.C.,O=GSE,OU=PKI,CN=Autoridad Subordinada 01 GSE,emailAddress=info@gse.com.co</ds:X509IssuerName><ds:X509SerialNumber>121661055508691137319120</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>t9Km7Of2vmnts0hd8XX9ondKnFhEZCg7kk4FIiPN5Cy3kV8W/GT5DM0RbXwsbtKcfM71sK4916mlAo8DNktPQQ==</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CO,O=GSE,OU=PKI,CN=Autoridad Raiz GSE,emailAddress=info@gse.com.co</ds:X509IssuerName><ds:X509SerialNumber>287858738846225454503326</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>/D1i5HUM0W3oBFZMSenFxhxC6C/5BSQ3SF1BPdO00F/OGilQx5NtE/CE40h4FJHmUBwC6rf3i+zoL0T3K/+sgA==</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CO,O=GSE,OU=PKI,CN=Autoridad Raiz GSE,emailAddress=info@gse.com.co</ds:X509IssuerName><ds:X509SerialNumber>106864729177600983785696</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier>https://facturaelectronica.dian.gov.co/politicadefirma/v2/politicadefirmav2.pdf</xades:Identifier></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><ds:DigestValue>dMoMvtcG5aIzgYo0tIsSQeVJBDnUnfSOfBpxXrmor0Y=</ds:DigestValue></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier><xades:SignerRole><xades:ClaimedRoles><xades:ClaimedRole>supplier</xades:ClaimedRole></xades:ClaimedRoles></xades:SignerRole></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></ext:ExtensionContent>
+    </ext:UBLExtension>
+  </ext:UBLExtensions>
+  <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>10</cbc:CustomizationID>
+  <cbc:ProfileID>DIAN 2.1: Factura Electrónica de Venta</cbc:ProfileID>
+  <cbc:ProfileExecutionID>1</cbc:ProfileExecutionID>
+  <cbc:ID>S37544</cbc:ID>
+  <cbc:UUID schemeID="1" schemeName="CUFE-SHA384">df699066191000bf42bf85d980fe69d94fa98cf173d26714825b255de7a483c1c1b1fef2b433b55de1aba7c4570d25bc</cbc:UUID>
+  <cbc:IssueDate>2024-06-19</cbc:IssueDate>
+  <cbc:IssueTime>07:14:16-05:00</cbc:IssueTime>
+  <cbc:DueDate>2024-06-19</cbc:DueDate>
+  <cbc:InvoiceTypeCode>01</cbc:InvoiceTypeCode>
+  <cbc:Note>CODIGO CIU 8621 TARIFA DE RETENCION EN LA FUENTE A TITULO DEL IMPUESTO DE RENTA SEGUN ARTICULO 392 INCISO 5 DEL ET Y ART 6 DEL DECRETO 2271 DE 2009 2%, FAVOR NO PRACTICAR RETENCION DE INDUSTRIA Y COMERCIO. LOS SERVICIOS DE SALUD PRESTADOS POR SUSMEDICOS S.A.S SE ENCUENTRAN EXCLUIDOS DE ESTE IMPUESTO RESOLUCION 143 DE ENERO 14 DE 2018 ...</cbc:Note>
+  <cbc:DocumentCurrencyCode>COP</cbc:DocumentCurrencyCode>
+  <cbc:LineCountNumeric>1</cbc:LineCountNumeric>
+  <cac:AccountingSupplierParty>
+    <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
+    <cac:Party>
+      <cac:PhysicalLocation>
+        <cac:Address>
+          <cbc:ID>05001</cbc:ID>
+          <cbc:CityName>Medellín</cbc:CityName>
+          <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CL 29 A 50 09 ED JOYS STAZ PISOS 5 6 7 8</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:Address>
+      </cac:PhysicalLocation>
+      <cac:PartyTaxScheme>
+        <cbc:RegistrationName>SUS MEDICOS S.A.S</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800113024</cbc:CompanyID>
+        <cbc:TaxLevelCode>R-99-PN</cbc:TaxLevelCode>
+        <cac:RegistrationAddress>
+          <cbc:ID>05001</cbc:ID>
+          <cbc:CityName>Medellín</cbc:CityName>
+          <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CL 29 A 50 09 ED JOYS STAZ PISOS 5 6 7 8</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:RegistrationAddress>
+        <cac:TaxScheme>
+          <cbc:ID>01</cbc:ID>
+          <cbc:Name>IVA</cbc:Name>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>SUS MEDICOS S.A.S</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800113024</cbc:CompanyID>
+        <cac:CorporateRegistrationScheme>
+          <cbc:ID>S</cbc:ID>
+          <cbc:Name>2115153204</cbc:Name>
+        </cac:CorporateRegistrationScheme>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>SUS MEDICOS S.A.S</cbc:Name>
+        <cbc:Telephone>4486363</cbc:Telephone>
+        <cbc:ElectronicMail>contablidadsusmedicos@gmail.com</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
+    <cac:Party>
+      <cac:PhysicalLocation>
+        <cac:Address>
+          <cbc:ID>05001</cbc:ID>
+          <cbc:CityName>Medellín</cbc:CityName>
+          <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CC 37b # 43 A 46</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:Address>
+      </cac:PhysicalLocation>
+      <cac:PartyTaxScheme>
+        <cbc:RegistrationName>COMPAÑIA DE INGENIEROS MECANICOS Y CIVILES S.A.S.</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="0" schemeName="31">890932579</cbc:CompanyID>
+        <cbc:TaxLevelCode>R-99-PN</cbc:TaxLevelCode>
+        <cac:RegistrationAddress>
+          <cbc:ID>05001</cbc:ID>
+          <cbc:CityName>Medellín</cbc:CityName>
+          <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CC 37b # 43 A 46</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:RegistrationAddress>
+        <cac:TaxScheme>
+          <cbc:ID>ZZ</cbc:ID>
+          <cbc:Name>No aplica</cbc:Name>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>COMPAÑIA DE INGENIEROS MECANICOS Y CIVILES S.A.S.</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="0" schemeName="31">890932579</cbc:CompanyID>
+        <cac:CorporateRegistrationScheme>
+          <cbc:Name>2106737803</cbc:Name>
+        </cac:CorporateRegistrationScheme>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>COMPAÑIA DE INGENIEROS MECANICOS Y CIVILES S.A.S.</cbc:Name>
+        <cbc:Telephone>3746888</cbc:Telephone>
+        <cbc:ElectronicMail>sistemasdeinfosusmedicos@gmail.com</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:PaymentMeans>
+    <cbc:ID>1</cbc:ID>
+    <cbc:PaymentMeansCode>42</cbc:PaymentMeansCode>
+    <cbc:PaymentID>1</cbc:PaymentID>
+  </cac:PaymentMeans>
+  <cac:PaymentTerms>
+    <cbc:ReferenceEventCode>1</cbc:ReferenceEventCode>
+  </cac:PaymentTerms>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="COP">224000.00</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="COP">0.00</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="COP">224000.00</cbc:TaxInclusiveAmount>
+    <cbc:PrepaidAmount currencyID="COP">0.00</cbc:PrepaidAmount>
+    <cbc:PayableAmount currencyID="COP">224000.00</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="EA">1.000000</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="COP">224000.00</cbc:LineExtensionAmount>
+    <cac:Item>
+      <cbc:Description>Factura de venta examenes en prepago para convenio 226, PAGO DEL 18 DE JUNIO 2024</cbc:Description>
+      <cac:StandardItemIdentification>
+        <cbc:ID schemeID="020" schemeName="Partida Arancelarias" schemeAgencyID="195">0</cbc:ID>
+      </cac:StandardItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="COP">224000.00</cbc:PriceAmount>
+      <cbc:BaseQuantity unitCode="EA">1.000000</cbc:BaseQuantity>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>

@@ -1,0 +1,60 @@
+.plans-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+  }
+  
+  .plan-container {
+    width: 30%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+  
+  .plan-container:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .plan-image {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .plan-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .plan-image h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.5em;
+    font-weight: bold;
+  }
+  
+  .plan-image p {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .btn-reservar {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-reservar:hover {
+    background-color: #3e8e41;
+  }

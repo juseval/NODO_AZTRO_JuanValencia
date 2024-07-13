@@ -1,0 +1,42 @@
+.plans-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+  }
+  
+  #map-container {
+    width: 80%;
+    height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .plan-details {
+    margin-top: 2em;
+    text-align: center;
+    max-width: 500px;
+  }
+  
+  .plan-details h3 {
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  .plan-details p {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .btn-reservar {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-reservar:hover {
+    background-color: #3e8e41;
+  }

@@ -1,0 +1,120 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+body{
+  background-image: url(./Imagenes/Fondo3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+  header {
+    background-color:  rgba(0, 0, 0, 0.0);
+    color: #fefefe;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav{
+    display: flex;
+    align-items: center;
+    width: 900px;
+  }
+
+  .imagen{
+    width: 60px;
+    height: 60px;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px; 
+  }
+
+  nav ul li:hover{
+    border-bottom: 2px solid white;    
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 200;
+  }
+
+  
+
+  div{
+    margin: 0px 5%;
+  }
+
+  button{ 
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    background-color: blue;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+}
+
+main{
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.contenedor{
+  display: flex;
+  align-items: center;
+}
+
+
+.titulo{
+  width: 60%;
+  font-size: 40px;
+}
+
+.mapa{
+  width: 40%;
+}
+
+.mapa img{
+  width: 100%;
+}
+
+h1{
+  color: white;
+}
+h1 span{
+  color: rgb(75, 235, 235);
+}
+
+main p, main a{
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+  margin-left: 10%;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+

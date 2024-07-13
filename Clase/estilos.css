@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.principal{
+    width: 100%;
+    height: 2500px;
+    padding: 10px;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.item1, .item2, .item3{
+    width: 150px;
+    height: 150px;
+}
+
+.item1{
+    position: fixed;
+    background-color: rgb(13, 255, 0);
+}
+
+.item2{
+    background-color: blue;
+}
+
+.item3{
+    background-color: blueviolet;
+}

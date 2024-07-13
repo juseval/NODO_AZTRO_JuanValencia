@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:sac="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2" xmlns:sbc="urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2" xmlns:sts="dian:gov:co:facturaelectronica:Structures-2-1" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2     http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd">
+  <ext:UBLExtensions>
+    <ext:UBLExtension>
+      <ext:ExtensionContent>
+        <sts:DianExtensions>
+          <sts:InvoiceControl>
+            <sts:InvoiceAuthorization>18764067002222</sts:InvoiceAuthorization>
+            <sts:AuthorizationPeriod>
+              <cbc:StartDate>2024-03-08</cbc:StartDate>
+              <cbc:EndDate>2025-03-08</cbc:EndDate>
+            </sts:AuthorizationPeriod>
+            <sts:AuthorizedInvoices>
+              <sts:Prefix>ECRE</sts:Prefix>
+              <sts:From>41857</sts:From>
+              <sts:To>60000</sts:To>
+            </sts:AuthorizedInvoices>
+          </sts:InvoiceControl>
+          <sts:InvoiceSource>
+            <cbc:IdentificationCode listAgencyID="6" listAgencyName="United Nations Economic Commission for Europe" listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.1">CO</cbc:IdentificationCode>
+          </sts:InvoiceSource>
+          <sts:SoftwareProvider>
+            <sts:ProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="6" schemeName="31">900390126</sts:ProviderID>
+            <sts:SoftwareID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">82d21092-144e-4b66-b720-6cdf9f661767</sts:SoftwareID>
+          </sts:SoftwareProvider>
+          <sts:SoftwareSecurityCode schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">d74133a08f4a10412449a78339c9678dc171c246c4f1a62350a196d8e1eacd4e1331c64317070281f5bf0b0ddc7c213b</sts:SoftwareSecurityCode>
+          <sts:AuthorizationProvider>
+            <sts:AuthorizationProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800197268</sts:AuthorizationProviderID>
+          </sts:AuthorizationProvider>
+          <sts:QRCode>NumFac: ECRE44510
+FecFac: 2024-06-04
+HorFac: 14:30:54-05:00
+NitFac: 900378955
+DocAdq: 890932579
+ValFac: 24000.00
+ValIva: 4560.00
+ValOtroIm: 0.00
+ValTolFac: 28560.00
+CUFE: 59bb922fe3475b795c517793ad577d6e5ddbe81a998fc5540d7015e75c251d6bf98a45bd6e140077446cc33353d7a23f
+https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=59bb922fe3475b795c517793ad577d6e5ddbe81a998fc5540d7015e75c251d6bf98a45bd6e140077446cc33353d7a23f</sts:QRCode>
+        </sts:DianExtensions>
+      </ext:ExtensionContent>
+    </ext:UBLExtension>
+    <ext:UBLExtension>
+      <ext:ExtensionContent><ds:Signature Id="xmldsig-930ff7b3-ccfe-460c-b50e-38644c359127">
+		<ds:SignedInfo>
+		<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+		<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+		<ds:Reference Id="xmldsig-930ff7b3-ccfe-460c-b50e-38644c359127-ref0" URI="">
+		<ds:Transforms>
+		<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+		</ds:Transforms>
+		<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+		<ds:DigestValue>cQFmAjyRJrahWe6YzqU53mpvI3Hsz/lx3Tt89vsIzAo=</ds:DigestValue>
+		</ds:Reference>
+		<ds:Reference URI="#xmldsig-930ff7b3-ccfe-460c-b50e-38644c359127-keyinfo">
+		<ds:Transforms>
+		<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+		</ds:Transforms>
+		<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+		<ds:DigestValue>BxHPxZ2Ng1Du7JOlSbtmHaVA4MK/ghNzVGvHRYLDwRw=</ds:DigestValue>
+		</ds:Reference>
+		<ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-930ff7b3-ccfe-460c-b50e-38644c359127-signedprops">
+		<ds:Transforms>
+		<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+		</ds:Transforms>
+		<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+		<ds:DigestValue>NjWwNpsW8Sz07Mp6Z9qokcAKm4/edjjSmzjCjSaa23w=</ds:DigestValue>
+		</ds:Reference>
+		</ds:SignedInfo>
+		<ds:SignatureValue Id="xmldsig-930ff7b3-ccfe-460c-b50e-38644c359127-sigvalue">lEV2dfFrRWM8rx+gldVFadDEfC+ihDPkEi62ZHXKR3Fb79js6fjkii5fYM5IW6kld/zVXKu75T2px6iKKBRfTIPR/tpd/HeSYFu7CHSk7k5N5X5EvhRHvHWrOjzzFD+auTupSIFHHmz8r6DIKAVpx+3divE3RWk0PYsGMb53YPJbFzFxHvW0LyCgKAco57To7uoy5AcMqnY/aA6HpxbjTSilSXml1apjrO9z7IQ1TYhEvQixOobtJhLaOPToikIfZFUB9j5CfvKDmmw6AiEYJrZDe9gg6DZJWA2a2/YXYO25zjDh4lsb8t75ZojTM6BeZGbCxwFjIn8/nSUMB5UFIA==</ds:SignatureValue>
+		<ds:KeyInfo Id="xmldsig-930ff7b3-ccfe-460c-b50e-38644c359127-keyinfo">
+		<ds:X509Data>
+		<ds:X509Certificate>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</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<ds:Object><xades:QualifyingProperties Target="#xmldsig-930ff7b3-ccfe-460c-b50e-38644c359127"><xades:SignedProperties Id="xmldsig-930ff7b3-ccfe-460c-b50e-38644c359127-signedprops"><xades:SignedSignatureProperties><xades:SigningTime>2024-06-04T14:31:05.000-05:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>SiZHjZ3H4zHUNUZcjrBuaeMZxGigG9XewZabdctn+sI=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=CO,L=Bogota D.C.,O=Andes SCD,OU=Division de certificacion entidad final,CN=CA ANDES SCD S.A. Clase II v2,1.2.840.113549.1.9.1=#1614696e666f40616e6465737363642e636f6d2e636f</ds:X509IssuerName><ds:X509SerialNumber>3715158840325811263</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier>https://facturaelectronica.dian.gov.co/politicadefirma/v2/politicadefirmav2.pdf</xades:Identifier><xades:Description>Política de firma para facturas electrónicas de la República de Colombia</xades:Description></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>dMoMvtcG5aIzgYo0tIsSQeVJBDnUnfSOfBpxXrmor0Y=</ds:DigestValue></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
+		</ds:Signature></ext:ExtensionContent>
+    </ext:UBLExtension>
+  </ext:UBLExtensions>
+  <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>10</cbc:CustomizationID>
+  <cbc:ProfileID>DIAN 2.1: Factura Electrónica de Venta</cbc:ProfileID>
+  <cbc:ProfileExecutionID>1</cbc:ProfileExecutionID>
+  <cbc:ID>ECRE44510</cbc:ID>
+  <cbc:UUID schemeID="1" schemeName="CUFE-SHA384">59bb922fe3475b795c517793ad577d6e5ddbe81a998fc5540d7015e75c251d6bf98a45bd6e140077446cc33353d7a23f</cbc:UUID>
+  <cbc:IssueDate>2024-06-04</cbc:IssueDate>
+  <cbc:IssueTime>14:30:54-05:00</cbc:IssueTime>
+  <cbc:DueDate>2024-06-04</cbc:DueDate>
+  <cbc:InvoiceTypeCode>01</cbc:InvoiceTypeCode>
+  <cbc:Note>FACTURA CANCELADA . . .......FAVOR CONSIGNAR EN BANCOLOMBIA CUENTA......... CORRIENTE 0 0 4 6 2 2 8 2 2 5 1 DAVIVIENDA CUENTA CORRIENTE 0 3 5 7 6 9 9 9 9 8 1 0</cbc:Note>
+  <cbc:Note>VENDEDOR : 01GE01-GERENCIA</cbc:Note>
+  <cbc:Note>Codigo Cliente: COD0001-COMPANIA DE INGENIEROS MECANICOS Y CIVILES S.A.S</cbc:Note>
+  <cbc:DocumentCurrencyCode>COP</cbc:DocumentCurrencyCode>
+  <cbc:LineCountNumeric>1</cbc:LineCountNumeric>
+  <cac:AccountingSupplierParty>
+    <cbc:AdditionalAccountID schemeAgencyID="195" schemeID="6" schemeName="31">1</cbc:AdditionalAccountID>
+    <cac:Party>
+      <cbc:IndustryClassificationCode>4752</cbc:IndustryClassificationCode>
+      <cac:PartyName>
+        <cbc:Name>FIJACIONES OROZCO S.A.S.</cbc:Name>
+      </cac:PartyName>
+      <cac:PhysicalLocation>
+        <cac:Address>
+          <cbc:ID>05001</cbc:ID>
+          <cbc:CityName>MEDELLÍN</cbc:CityName>
+          <cbc:PostalZone>050023</cbc:PostalZone>
+          <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>Cra 50 C # 10 SUR 72</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:Address>
+      </cac:PhysicalLocation>
+      <cac:PartyTaxScheme>
+        <cbc:RegistrationName>FIJACIONES OROZCO S.A.S.</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="6" schemeName="31">900378955</cbc:CompanyID>
+        <cbc:TaxLevelCode listName="No aplica">R-99-PN</cbc:TaxLevelCode>
+        <cac:RegistrationAddress>
+          <cbc:ID>05001</cbc:ID>
+          <cbc:CityName>MEDELLÍN</cbc:CityName>
+          <cbc:PostalZone>050023</cbc:PostalZone>
+          <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CRA 50 C # 10 SUR 72</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:RegistrationAddress>
+        <cac:TaxScheme>
+          <cbc:ID>01</cbc:ID>
+          <cbc:Name>IVA</cbc:Name>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>FIJACIONES OROZCO S.A.S.</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="6" schemeName="31">900378955</cbc:CompanyID>
+        <cac:CorporateRegistrationScheme>
+          <cbc:ID>ECRE</cbc:ID>
+          <cbc:Name>FIJACIONES OROZCO S.A.S.</cbc:Name>
+        </cac:CorporateRegistrationScheme>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>FIJACIONES OROZCO SAS</cbc:Name>
+        <cbc:Telephone>6044445532</cbc:Telephone>
+        <cbc:Telefax>6044445532113</cbc:Telefax>
+        <cbc:ElectronicMail>eorozco@fijacionesorozco.com.co</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
+    <cac:Party>
+      <cac:PartyName>
+        <cbc:Name>COMPANIA DE INGENIEROS MECANICOS Y CIVILES S.A.S</cbc:Name>
+      </cac:PartyName>
+      <cac:PhysicalLocation>
+        <cac:Address>
+          <cbc:ID>05360</cbc:ID>
+          <cbc:CityName>ITAGUI</cbc:CityName>
+          <cbc:PostalZone>050023</cbc:PostalZone>
+          <cbc:CountrySubentity>ANTIOQUIA</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CL 37 B 43 A 46</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:Address>
+      </cac:PhysicalLocation>
+      <cac:PartyTaxScheme>
+        <cbc:RegistrationName>COMPANIA DE INGENIEROS MECANICOS Y CIVILES S.A.S</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="0" schemeName="31">890932579</cbc:CompanyID>
+        <cbc:TaxLevelCode listName="No aplica">R-99-PN</cbc:TaxLevelCode>
+        <cac:RegistrationAddress>
+          <cbc:ID>05360</cbc:ID>
+          <cbc:CityName>ITAGUI</cbc:CityName>
+          <cbc:PostalZone>050023</cbc:PostalZone>
+          <cbc:CountrySubentity>ANTIOQUIA</cbc:CountrySubentity>
+          <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+          <cac:AddressLine>
+            <cbc:Line>CL 37 B 43 A 46</cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+            <cbc:Name languageID="es">Colombia</cbc:Name>
+          </cac:Country>
+        </cac:RegistrationAddress>
+        <cac:TaxScheme>
+          <cbc:ID>01</cbc:ID>
+          <cbc:Name>IVA</cbc:Name>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>COMPANIADEINGENIEROSMECANICOSYCIVILESS.A.S</cbc:RegistrationName>
+        <cbc:CompanyID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="0" schemeName="31">890932579</cbc:CompanyID>
+        <cac:CorporateRegistrationScheme>
+          <cbc:ID>ECRE</cbc:ID>
+          <cbc:CorporateRegistrationTypeCode>00001</cbc:CorporateRegistrationTypeCode>
+        </cac:CorporateRegistrationScheme>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>LINA CUERVO ALBEIRO AGUDELO</cbc:Name>
+        <cbc:Telephone>374 6888</cbc:Telephone>
+        <cbc:ElectronicMail>admon@codimec.com</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:PaymentMeans>
+    <cbc:ID schemeID="" schemeName="">2</cbc:ID>
+    <cbc:PaymentMeansCode>ZZZ</cbc:PaymentMeansCode>
+    <cbc:PaymentDueDate>2024-06-04</cbc:PaymentDueDate>
+  </cac:PaymentMeans>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="COP">4560.00</cbc:TaxAmount>
+    <cbc:RoundingAmount currencyID="COP">0.00</cbc:RoundingAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="COP">24000.00</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="COP">4560.00</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:Percent>19.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>01</cbc:ID>
+          <cbc:Name>IVA</cbc:Name>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="COP">24000.00</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="COP">24000.00</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="COP">28560.00</cbc:TaxInclusiveAmount>
+    <cbc:ChargeTotalAmount currencyID="COP">0.00</cbc:ChargeTotalAmount>
+    <cbc:PayableRoundingAmount currencyID="COP">0.00</cbc:PayableRoundingAmount>
+    <cbc:PayableAmount currencyID="COP">28560.00</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="NIU">2.00</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="COP">24000.00</cbc:LineExtensionAmount>
+    <cbc:FreeOfChargeIndicator>false</cbc:FreeOfChargeIndicator>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="COP">4560.00</cbc:TaxAmount>
+      <cbc:RoundingAmount currencyID="COP">0.00</cbc:RoundingAmount>
+      <cac:TaxSubtotal>
+        <cbc:TaxableAmount currencyID="COP">24000.00</cbc:TaxableAmount>
+        <cbc:TaxAmount currencyID="COP">4560.00</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:Percent>19.00</cbc:Percent>
+          <cac:TaxScheme>
+            <cbc:ID>01</cbc:ID>
+            <cbc:Name>IVA</cbc:Name>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description>COPA MAGNETICA PARA TORN. DE 5/16 X 2.1/2</cbc:Description>
+      <cac:SellersItemIdentification>
+        <cbc:ID>94336</cbc:ID>
+      </cac:SellersItemIdentification>
+      <cac:StandardItemIdentification>
+        <cbc:ID schemeID="999" schemeName="Estándar de adopción del contribuyente">999</cbc:ID>
+      </cac:StandardItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="COP">12000.00</cbc:PriceAmount>
+      <cbc:BaseQuantity unitCode="NIU">2.00</cbc:BaseQuantity>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>
