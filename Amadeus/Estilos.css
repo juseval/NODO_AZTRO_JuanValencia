@@ -11,6 +11,32 @@ body{
   background-size: cover;
   background-attachment: scroll;
 }
+body .carousel .option {
+  background-image: var(--optionBackground);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: background-image 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
+}
+
+body .carousel .option .label .info > div {
+  position: relative;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), 0.5s opacity ease-out;
+}
+
+body .carousel .option .label .info .main {
+  font-weight: bold;
+  font-size: 1.2rem;    
+}
+
+body .carousel .option .label .info .sub {
+  transition-delay: 0.1s; 
+}
+
+
+
+
 
   header {
     background-color:  rgba(0, 0, 0, 0.0);
