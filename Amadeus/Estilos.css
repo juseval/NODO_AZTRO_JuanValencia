@@ -11,31 +11,6 @@ body{
   background-size: cover;
   background-attachment: scroll;
 }
-body .carousel .option {
-  background-image: var(--optionBackground);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  transition: background-image 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
-}
-
-body .carousel .option .label .info > div {
-  position: relative;
-  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), 0.5s opacity ease-out;
-}
-
-body .carousel .option .label .info .main {
-  font-weight: bold;
-  font-size: 1.2rem;    
-}
-
-body .carousel .option .label .info .sub {
-  transition-delay: 0.1s; 
-}
-
-
-
 
 
   header {
@@ -114,7 +89,7 @@ main{
 
 .titulo{
   width: 60%;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .mapa{
@@ -144,3 +119,60 @@ main a:hover {
   text-decoration: underline;
 }
 
+.carrusel{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: 50%;
+}
+
+.carrusel .imagenes{
+  border: 2px solid white;
+  border-radius: 20px;
+  min-width: 40px;
+  min-height: 200px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.carrusel .imagenes .tarjeta-baja .logo{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 5px;
+}
+
+
+.carrusel .imagenes .tarjeta-baja{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.carrusel .imagenes .tarjeta-baja .descripcion{
+  text-align: left;
+  font-size: 15px;
+  margin: 0;
+  color: white;
+}
+
+.mostrar{
+  width: 600%;
+  transition: all 5s;
+}
+
+.nomostrar .descripcion{
+  display: none;
+}
+
+.mostrar .descripcion{
+  display: block;
+}
