@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Pesticida y Cerca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora para Terreno Trapezoidal</h1>
+        <form id="calculadoraForm">
+            <h2>Dimensiones del Terreno</h2>
+            <div class="input-group">
+                <label for="baseCorta">Base corta (metros):</label>
+                <input type="number" id="baseCorta" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="baseLarga">Base larga (metros):</label>
+                <input type="number" id="baseLarga" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="altura">Altura (metros):</label>
+                <input type="number" id="altura" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="lado1">Lado 1 (metros):</label>
+                <input type="number" id="lado1" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="lado2">Lado 2 (metros):</label>
+                <input type="number" id="lado2" step="0.01" required>
+            </div>
+
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

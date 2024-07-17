@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    height: 100px;
+    box-shadow: 0 0.5px 8px black;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+
+}
+
+
+form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+input, button {
+    margin: 10px 0;
+    padding: 5px;
+    width: 100%;
+}
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+}
+

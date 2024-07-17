@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
     <header>
@@ -23,9 +24,19 @@
               <li><a href="../Reto 7/Calculadora IMC.html">Reto 7</a></li>
             </ul>
           </nav>
+          <h1>Calculadora de IMC</h1>
     </header>
-    <i href="../Reto 5/Forms.html">
-        <p>Hola, me llamo Juan Valencia, me gusta leer, comer, ir al gym y amo jugar video juegos
-        mi contacto es: jsvalencie@eafit.edu.co</p>          
+    <form id="imcForm">
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" required>
+        
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" step="0.01" required>
+        
+        <button type="submit">Calcular IMC</button>
+    </form>
+    <div id="resultado"></div>
+
+<script src="app.js"></script>
 </body>
 </html>

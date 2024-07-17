@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Promedio de Tiempo de Natación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Promedio de Tiempo de Natación</h1>
+        <form id="tiempoNatacionForm">
+            <h2>Ingrese los tiempos de las 5 pruebas (en segundos)</h2>
+            <div class="input-group">
+                <label for="tiempo1">Prueba 1:</label>
+                <input type="number" id="tiempo1" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="tiempo2">Prueba 2:</label>
+                <input type="number" id="tiempo2" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="tiempo3">Prueba 3:</label>
+                <input type="number" id="tiempo3" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="tiempo4">Prueba 4:</label>
+                <input type="number" id="tiempo4" step="0.01" required>
+            </div>
+            <div class="input-group">
+                <label for="tiempo5">Prueba 5:</label>
+                <input type="number" id="tiempo5" step="0.01" required>
+            </div>
+
+            <button type="submit">Calcular Promedio</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

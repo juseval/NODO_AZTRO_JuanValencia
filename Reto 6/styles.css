@@ -5,31 +5,35 @@
 }
 
 header{
-    background-color: black;
+    background-color: #1f1c4b;
     color: white;
     padding: 10px;
     height: 100px;
+    box-shadow: 0 0.5px 8px black;
 }
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #1f1c4b;
     margin: 0;
     padding: 0;
   }
+
+nav a{
+  color: white;
+}
 
 nav ul{
     display: flex;
     align-items: center;
     overflow: hidden;
-    width: 900px;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 nav li{
-    margin-right: 20px;
+    margin-right: 10px;
 }
   
 
@@ -37,28 +41,52 @@ nav li{
     text-align: center;
     margin-top: 2rem;
   }
-  
+
   .gallery {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
-    padding: 2rem;
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
   }
   
   .gallery-item {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   }
   
   .gallery-item img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    object-fit: cover;
+    transition: 0.3s ease;
   }
   
   .gallery-item h3 {
     margin-top: 1rem;
     font-size: 1.2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 2%;
+    margin-top: 2rem;
+    color: white;
+    transition: 0.3s ease;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+
+.gallery-item:hover img {
+    transform: scale(1.1);
   }

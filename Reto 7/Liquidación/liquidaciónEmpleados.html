@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquidación de Empleados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Liquidación de Empleados</h1>
+    <form id="liquidacionForm">
+        <label for="diasTrabajados">Días trabajados:</label>
+        <input type="number" id="diasTrabajados" required>
+        
+        <label for="horasExtrasDiurnas">Horas extras diurnas:</label>
+        <input type="number" id="horasExtrasDiurnas" required>
+        
+        <label for="horasExtrasNocturnas">Horas extras nocturnas:</label>
+        <input type="number" id="horasExtrasNocturnas" required>
+        
+        <label for="horasExtrasFestivos">Horas extras festivos:</label>
+        <input type="number" id="horasExtrasFestivos" required>
+        
+        <button type="submit">Calcular Liquidación</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
