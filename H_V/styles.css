@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  float: right;
+  margin-left: 20px;
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 10px 30px;
+}
+
+.name-title {
+  text-align: left;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+
+h2 {
+  margin: 10px 0 0;
+  font-weight: normal;
+}
+
+main {
+  display: flex;
+  width: 100%;
+}
+
+.left-column,
+.right-column {
+  padding: 20px;
+}
+
+.left-column {
+  width: 65%;
+}
+
+.right-column {
+  width: 50%;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+h3 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+h4 {
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.year {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.content {
+  margin-left: 70px;
+}
+
+.content h4 {
+  margin: 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+button {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #555;
+  }
+}
+
+.export-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: rgb(82, 71, 71);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.export-button:hover {
+  background-color: #45a049;
+}
+
+@media print {
+  @page {
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  header {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  /* Resto de tus estilos de impresión */
+}

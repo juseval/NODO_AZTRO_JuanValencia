@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Juan Sebastian Valencia Estrada</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container" id="cv-content">
+      <header>
+        <div class="name-title">
+          <h1>JUAN SEBASTIAN<br />VALENCIA ESTRADA</h1>
+        </div>
+        <img class="profile-photo" src="./img/Foto Hv.png" alt="" />
+      </header>
+
+      <main>
+        <section class="left-column">
+          <div class="section">
+            <h3>PERFIL</h3>
+            <p>
+              Soy una persona con gran disposición para cualquier actividad, siempre buscando mejorar y ayudar a los demás a crecer. Me esfuerzo por adquirir nuevos conocimientos para resolver problemas y tengo habilidad en el manejo de software, innovando en metodologías de trabajo digital, sistematizando y automatizando procesos. <br><br> Estudio Contaduría Pública y Desarrollo Web, tengo 3 años de experiencia como auxiliar contable y 4 como analista contable. <br><br> He realizado tareas como el reconocimiento, análisis, medición e incorporación de los hechos económicos, análisis de balances y estructuración de estados financieros. <br><br>Me considero hábil con la tecnología y curioso en temas relacionados, combino la contabilidad y los sistemas, ya que ambos campos están interrelacionados.
+            </p>
+          </div>
+
+          <div class="section">
+            <h3>HABILIDADES</h3>
+            <ul>
+              <li>Excel avanzado</li>
+              <li>Presentación de Impuestos</li>
+              <li>Causación de comprobantes Contables</li>
+              <li>Control Documental</li>
+              <li>Causación de Nomina</li>
+              <li>Conciliaciones Bancarias (Tarjetas crédito y Débito)</li>
+              <li>Control y Causación de Depreciación y Amortización</li>
+              <li>Revisión y analisis de balances</li>
+              <li>Elaboración de Estados Financieros</li>
+              <li>Apoyo en la Elaboración de Medios Magnéticos</li>
+              <li>Realización de formatos contables</li>
+              <li>Compilación de Bases de Datos</li>
+              <li>Siigo S.A.S</li>
+              <li>Contai - Ilimitada</li>
+              <li>HTML 5</li>
+              <li>CSS 3</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="right-column">
+          <div class="section">
+            <h3>CONTACTO</h3>
+            <p><strong>Número Celular: </strong>302 4486307</p>
+            <p><strong>Dirección: </strong>CL 25 # 55-51 int 104, Bello</p>
+            <p><strong>C.C: </strong>1000633768 de Bello</p>
+            <p><strong>Correo: </strong>juseval98@hotmail.com</p>
+          </div>
+
+          <div class="section">
+            <h3>REFERENCIAS</h3>
+            <h4>Andrés Sepúlveda</h4>
+            <ul>
+              <li>Contador Público</li>
+              <li>313 610 24 22</li>
+              <li>Medellín - Antioquia</li>
+            </ul>
+            <h4>Daniela Posada</h4>
+            <ul>
+              <li>Contador Público</li>
+              <li>314 776 57 95</li>
+              <li>Medellín - Antioquia</li>
+            </ul>
+            <h4>Biviana Jiménez</h4>
+            <ul>
+              <li>Contador Público</li>
+              <li>315 780 21 12</li>
+              <li>Medellín - Antioquia</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>FORMACIÓN ACADÉMICA</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="year"></span>
+                <div class="content">
+                  <h4>Contaduría Pública</h4>
+                  <p>Universidad de Antioquia</p><br>
+                  <p>Universidad Autónoma Latinoamericana Medellín</p><br>
+                  <p>Corporación Universitaria Americana Medellín</p><br>
+                  <h4>Desarrollo Web</h4>
+                  <p>Universidad EAFIT</p><br>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>EXPERIENCIA LABORAL</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="year">2021 - 2024</span>
+                <div class="content">
+                  <h4>Analista Contable</h4>
+                  <p>Capital Lab S.A.S</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="year">2017 - 2020</span>
+                <div class="content">
+                  <h4>Auxiliar Contable</h4>
+                  <p>Trade AIM S.A.S</p>
+                  <p>Carga Truck S.A.S</p>
+                  <p>Conciencia Estratégica S.A.S</p>
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </main>
+      <button id="export-button">Exportar a PDF</button>
+
+    </div>
+
+    <script>
+      document.getElementById("export-button").addEventListener("click", () => {
+        const { jsPDF } = window.jspdf;
+        const cvContent = document.getElementById("cv-content");
+        const exportButton = document.getElementById("export-button");
+        const doc = new jsPDF();
+        
+        exportButton.style.display = "none"; // Ocultar el botón
+        
+        html2canvas(cvContent).then((canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+          const imgWidth = 210; 
+          const pageHeight = 295; 
+          const imgHeight = canvas.height * imgWidth / canvas.width;
+          let heightLeft = imgHeight;
+  
+          let position = 0;
+  
+          doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+          heightLeft -= pageHeight;
+  
+          while (heightLeft >= 0) {
+            position = heightLeft - imgHeight;
+            doc.addPage();
+            doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+          }
+          
+          doc.save("cv-juan-sebastian-valencia.pdf");
+          exportButton.style.display = "block"; // Mostrar el botón nuevamente
+        });
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+  </body>
+</html>
