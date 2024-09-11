@@ -114,6 +114,10 @@ def parse_document(xml_file):
         'TarifaINC': 0,
         'Bolsas': 0,
         'TarifaBolsas': 0,
+        'ICL': 0,
+        'ADV': 0,
+        'TarifaICL': 0,
+        'TarifaADV': 0,
         'Otros impuestos': 0,
         'Total impuesto': float(safe_find(root, './/cac:TaxTotal/cbc:TaxAmount', ns) or 0),
         'Total neto factura': float(safe_find(root, './/cac:LegalMonetaryTotal/cbc:TaxInclusiveAmount', ns) or 0),
@@ -132,15 +136,22 @@ def parse_document(xml_file):
         'TipoFactura': '',
         'DocumentType': document_type,
     }
-    
-    for tax_subtotal in root.findall('.//cac:TaxTotal/cac:TaxSubtotal', ns):
-        tax_category = safe_find(tax_subtotal, './/cac:TaxCategory/cac:TaxScheme/cbc:Name', ns).upper()
-        tax_amount = float(safe_find(tax_subtotal, './/cbc:TaxAmount', ns) or 0)
-        tax_percent = float(safe_find(tax_subtotal, './/cac:TaxCategory/cbc:Percent', ns) or 0)
+    for tax_total in root.findall('.//cac:TaxTotal', ns):
+        tax_subtotal = tax_total.find('.//cac:TaxSubtotal', ns)
+        if tax_subtotal is not None:
+            tax_category = safe_find(tax_subtotal, './/cac:TaxCategory/cac:TaxScheme/cbc:ID', ns)
+            tax_amount = float(safe_find(tax_subtotal, './/cbc:TaxAmount', ns) or 0)
+            tax_percent = float(safe_find(tax_subtotal, './/cac:TaxCategory/cbc:Percent', ns) or 0)
         
-        if 'IVA' in tax_category:
+        if tax_category == '01':  # IVA
             document_data['IVA'] = tax_amount
             document_data['TarifaIVA'] = tax_percent
+        elif tax_category == '32':  # ICL
+            document_data['ICL'] = tax_amount
+            document_data['TarifaICL'] = tax_percent
+        elif tax_category == '36':  # ADV
+            document_data['ADV'] = tax_amount
+            document_data['TarifaADV'] = tax_percent
         elif 'INC' in tax_category:
             document_data['INC'] = tax_amount
             document_data['TarifaINC'] = tax_percent
@@ -168,6 +179,7 @@ def parse_document(xml_file):
     document_lines = []
     total_bruto_gravado = 0
     total_bruto_no_gravado = 0
+
     for line in root.findall('.//cac:InvoiceLine', ns) or root.findall('.//cac:CreditNoteLine', ns) or root.findall('.//cac:DebitNoteLine', ns):
         line_data = {
             'DocumentID': document_data['DocumentID'],
@@ -271,7 +283,7 @@ def process_documents(xml_directory, output_directory):
                 suppliers_list.append(supplier_data)
             if customer_data:
                 customers_list.append(customer_data)
-                
+                    
     df_documents = pd.DataFrame(document_data_list)
     df_document_lines = pd.DataFrame(document_lines_list)
     df_suppliers = pd.DataFrame(suppliers_list).drop_duplicates(subset=['SupplierID'])
@@ -294,7 +306,7 @@ def process_documents(xml_directory, output_directory):
     print(f"Excel file has been created: {output_path}")
 
 # Example usage
-xml_directory = r'C:\Users\USUARIO\Documents\EMPRESAS IMPUESTOS\LICO CASTILLO S.A.S\2024\CONTABILIDAD\JULIO\FACTURAS RECIBIDAS\XML'
+xml_directory = r'C:\Users\USUARIO\Documents\EMPRESAS IMPUESTOS\LICO CASTILLO S.A.S\2024\CONTABILIDAD\AGOSTO\FACTURAS RECIBIDAS\XML'
 output_directory = r'C:\Users\USUARIO\Desktop'
 
 # Create output directory if it doesn't exist

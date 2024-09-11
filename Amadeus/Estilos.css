@@ -1,113 +1,109 @@
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
-body{
+body {
   background-image: url(./Imagenes/Fondo3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
 }
 
-
-  header {
-    background-color:  rgba(0, 0, 0, 0.0);
-    color: #fefefe;
-    padding: 20px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  nav{
-    display: flex;
-    align-items: center;
-    width: 900px;
-  }
-
-  .imagen{
-    width: 60px;
-    height: 60px;
-  }
-
-  img{
-    width: 100%;
-  }
-
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-left: 20px; 
-  }
-
-  nav ul li:hover{
-    border-bottom: 2px solid white;    
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 32px;
-    font-weight: 200;
-  }
-
-  
-
-  div{
-    margin: 0px 5%;
-  }
-
-  button{ 
-    padding: 10px;
-    border-radius: 6px;
-    color: white;
-    background-color: blue;
-    font-size: 15px;
-    font-weight: 600;
-    border: none;
+header {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fefefe;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-main{
+nav {
+  display: flex;
+  align-items: center;
+  width: 900px;
+}
+
+.imagen {
+  width: 60px;
+  height: 60px;
+}
+
+img {
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li:hover {
+  border-bottom: 2px solid white;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 200;
+}
+
+div {
+  margin: 0px 5%;
+}
+
+button {
+  padding: 10px;
+  border-radius: 6px;
+  color: white;
+  background-color: blue;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+}
+
+main {
   width: 100%;
   height: calc(100vh - 100px);
 }
 
-.contenedor{
+.contenedor {
   display: flex;
   align-items: center;
 }
 
-
-.titulo{
+.titulo {
   width: 60%;
   font-size: 35px;
 }
 
-.mapa{
+.mapa {
   width: 40%;
 }
 
-.mapa img{
+.mapa img {
   width: 100%;
 }
 
-h1{
+h1 {
   color: white;
 }
-h1 span{
+h1 span {
   color: rgb(75, 235, 235);
 }
 
-main p, main a{
+main p,
+main a {
   color: white;
   font-size: 30px;
   font-weight: 900;
@@ -119,7 +115,7 @@ main a:hover {
   text-decoration: underline;
 }
 
-.carrusel{
+.carrusel {
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -127,7 +123,7 @@ main a:hover {
   width: 50%;
 }
 
-.carrusel .imagenes{
+.carrusel .imagenes {
   border: 2px solid white;
   border-radius: 20px;
   min-width: 40px;
@@ -141,7 +137,7 @@ main a:hover {
   cursor: pointer;
 }
 
-.carrusel .imagenes .tarjeta-baja .logo{
+.carrusel .imagenes .tarjeta-baja .logo {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -149,30 +145,29 @@ main a:hover {
   margin: 5px;
 }
 
-
-.carrusel .imagenes .tarjeta-baja{
+.carrusel .imagenes .tarjeta-baja {
   width: 100%;
   padding: 0;
   margin: 0;
   display: flex;
 }
 
-.carrusel .imagenes .tarjeta-baja .descripcion{
+.carrusel .imagenes .tarjeta-baja .descripcion {
   text-align: left;
   font-size: 15px;
   margin: 0;
   color: white;
 }
 
-.mostrar{
+.mostrar {
   width: 600%;
   transition: all 5s;
 }
 
-.nomostrar .descripcion{
+.nomostrar .descripcion {
   display: none;
 }
 
-.mostrar .descripcion{
+.mostrar .descripcion {
   display: block;
 }
