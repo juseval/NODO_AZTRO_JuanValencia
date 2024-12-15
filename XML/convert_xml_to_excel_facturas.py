@@ -63,13 +63,16 @@ def parse_document(xml_file):
     ns = {'': 'urn:oasis:names:specification:ubl:schema:xsd:Invoice-2',
         'cbc': 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2',
         'cac': 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2',
-        'ext': 'urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2'}
+        'ext': 'urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2',
+        'sts': 'dian:gov:co:facturaelectronica:Structures-2-1',
+        }
     
     document_type = determine_document_type(root, ns)
     
     document_data = {
         'FileName': os.path.basename(xml_file),
         'DocumentID': safe_find(root, './/cbc:ID', ns),
+        'ReferenceID': safe_find(root, './/cac:InvoiceDocumentReference/cbc:ID', ns),       
         'Prefijo': safe_find(root, './/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/CustomFieldExtension/CustomField[@Name="Prefijo"]', ns),
         'IssueDate': safe_find(root, './/cbc:IssueDate', ns),
         'IssueTime': safe_find(root, './/cbc:IssueTime', ns),
@@ -108,7 +111,7 @@ def parse_document(xml_file):
         'Total Bruto Factura': float(safe_find(root, './/cac:LegalMonetaryTotal/cbc:TaxExclusiveAmount', ns) or 0),
         'Total Bruto Gravado': 0,
         'Total Bruto No Gravado': 0,
-        'IVA': 0,
+        'IVA': float(safe_find(root, './/cac:TaxTotal/cbc:TaxAmount', ns) or 0),
         'TarifaIVA': 0,
         'INC': 0,
         'TarifaINC': 0,
@@ -119,9 +122,10 @@ def parse_document(xml_file):
         'TarifaICL': 0,
         'TarifaADV': 0,
         'Otros impuestos': 0,
+        'ValOtroIm': 0,
         'Total impuesto': float(safe_find(root, './/cac:TaxTotal/cbc:TaxAmount', ns) or 0),
         'Total neto factura': float(safe_find(root, './/cac:LegalMonetaryTotal/cbc:TaxInclusiveAmount', ns) or 0),
-        'Descuento Global': 0,
+        'Descuento Global': float(safe_find(root, './/cac:AllowanceCharge/cbc:Amount', ns) or 0),
         'Recargo Global': 0,
         'Total factura': float(safe_find(root, './/cac:LegalMonetaryTotal/cbc:PayableAmount', ns) or 0),
         'Anticipos': float(safe_find(root, './/cac:LegalMonetaryTotal/cbc:PrepaidAmount', ns) or 0),
@@ -136,30 +140,49 @@ def parse_document(xml_file):
         'TipoFactura': '',
         'DocumentType': document_type,
     }
-    for tax_total in root.findall('.//cac:TaxTotal', ns):
+
+    icl_count = 0
+    adv_count = 0
+    
+    for index, tax_total in enumerate(root.findall('.//cac:TaxTotal', ns)):
+        # Obtener el TaxSubtotal
         tax_subtotal = tax_total.find('.//cac:TaxSubtotal', ns)
         if tax_subtotal is not None:
+        # Extraer la categoría y el esquema de impuestos
             tax_category = safe_find(tax_subtotal, './/cac:TaxCategory/cac:TaxScheme/cbc:ID', ns)
-            tax_amount = float(safe_find(tax_subtotal, './/cbc:TaxAmount', ns) or 0)
+            tax_amount = float(safe_find(tax_total, './/cbc:TaxAmount', ns) or 0)
             tax_percent = float(safe_find(tax_subtotal, './/cac:TaxCategory/cbc:Percent', ns) or 0)
-        
-        if tax_category == '01':  # IVA
+            tax_scheme = safe_find(tax_subtotal, './/cac:TaxCategory/cac:TaxScheme/cbc:Name', ns)
+
+        # Asignar valores según la categoría o esquema de impuestos
+        if tax_category == 'IVA':  # IVA
             document_data['IVA'] = tax_amount
             document_data['TarifaIVA'] = tax_percent
-        elif tax_category == '32':  # ICL
-            document_data['ICL'] = tax_amount
-            document_data['TarifaICL'] = tax_percent
-        elif tax_category == '36':  # ADV
-            document_data['ADV'] = tax_amount
-            document_data['TarifaADV'] = tax_percent
+        elif tax_category == 'ICL' or tax_scheme == 'ICL':  # ICL
+            icl_count += 1
+            if icl_count == 1:
+                document_data['ICL'] = tax_amount
+                document_data['TarifaICL'] = tax_percent
+            elif icl_count == 2:
+                document_data['2ICL'] = tax_amount
+                document_data['Tarifa2ICL'] = tax_percent
+        elif tax_category == 'ADV' or tax_scheme == 'ADV':  # ADV
+            adv_count += 1
+            if adv_count == 1:
+                document_data['ADV'] = tax_amount
+                document_data['TarifaADV'] = tax_percent
+            elif adv_count == 2:
+                document_data['2ADV'] = tax_amount
+                document_data['Tarifa2ADV'] = tax_percent
         elif 'INC' in tax_category:
             document_data['INC'] = tax_amount
             document_data['TarifaINC'] = tax_percent
-        elif 'BOLSAS' in tax_category:
-            document_data['Bolsas'] = tax_amount
-            document_data['TarifaBolsas'] = tax_percent
-        else:
+        elif 'BOLSAS' in tax_category: 
+            document_data['Bolsas'] = tax_amount 
+            document_data['TarifaBolsas'] = tax_percent 
+        else: 
             document_data['Otros impuestos'] += tax_amount
+
             
     for withholding_tax_total in root.findall('.//cac:WithholdingTaxTotal', ns):
         tax_category = safe_find(withholding_tax_total, './/cac:TaxCategory/cac:TaxScheme/cbc:Name', ns).upper()
@@ -306,7 +329,7 @@ def process_documents(xml_directory, output_directory):
     print(f"Excel file has been created: {output_path}")
 
 # Example usage
-xml_directory = r'C:\Users\USUARIO\Documents\EMPRESAS IMPUESTOS\LICO CASTILLO S.A.S\2024\CONTABILIDAD\AGOSTO\FACTURAS RECIBIDAS\XML'
+xml_directory = r'H:\My Drive\CODIMEC S.A.S - Contabilidad\2024\10. OCTUBRE\FACTURAS RECIBIDAS\XML'
 output_directory = r'C:\Users\USUARIO\Desktop'
 
 # Create output directory if it doesn't exist
